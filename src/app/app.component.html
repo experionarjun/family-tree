@@ -1,45 +1,72 @@
-<!--
-We will create a family tree using just CSS(3)
-The markup will be simple nested lists
--->
-<div class="tree">
-	<ul>
-		<li>
-			<a href="#">Parent</a>
-			<ul>
-				<li>
-					<a href="#">Child</a>
-					<ul>
-						<li>
-							<a href="#">Grand Child</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">Child</a>
-					<ul>
-						<li><a href="#">Grand Child</a></li>
-						<li>
-							<a href="#">Grand Child</a>
-							<ul>
-								<li>
-									<a href="#">Great Grand Child</a>
-								</li>
-								<li>
-									<a href="#">Great Grand Child</a>
-								</li>
-								<li>
-									<a href="#">Great Grand Child</a>
-								</li>
-							</ul>
-						</li>
-						<li><a href="#">Grand Child</a></li>
-					</ul>
-				</li>
-        <li>
-          <a>Child</a>
-        </li>
-			</ul>
-		</li>
-	</ul>
-</div>
+<form id="form1">
+  <div class="tree" id="FamilyTreeDiv">
+    <ul>
+      <li>
+        <div>
+					<span class="male">Joe Mighty</span>
+				</div>
+      </li>
+      <li>
+        <div>
+					<span class="female">Sue Mighty</span>
+					<span class="spacer"></span>
+					<span class="male">Jim Snow</span>
+				</div>
+        <ul>
+          <li>
+            <div>
+							<span class="male">Sam Snow</span>
+							<span class="spacer"></span>
+							<span class="female">Lily Sight</span>
+						</div>
+            <ul>
+              <li>
+                <div>
+									<span class="male">Ralf Snow</span>
+								</div>
+              </li>
+              <li>
+                <div>
+									<span class="female">Brie Snow</span>
+								</div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div>
+							<span class="male">Jim Snow</span>
+							<span class="spacer"></span>
+							<span class="female">Zoe Blue</span>
+						</div>
+            <ul>
+              <li>
+                <div>
+									<span class="male">Ralf Snow</span>
+									<span class="spacer"></span>
+									<span class="female">Sally Bern</span>
+								</div>
+                <ul>
+                  <li>
+                    <div>
+											<span class="female">Magna Snow</span>
+										</div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div>
+									<span class="female">Brie Snow</span>
+								</div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div>
+							<span class="male">John Snow</span>
+						</div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</form>
