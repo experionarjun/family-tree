@@ -1,0 +1,42 @@
+<div class="tree" id="FamilyTreeDiv">
+  <ul *ngIf="data">
+    <li *ngFor="let item of data">
+      <div *ngIf="!item.marriedTo">
+        <span [ngClass]="{'male':item.gender === 'M','female':item.gender === 'F'}">{{item.name}}</span>
+      </div>
+      <div *ngIf="item.marriedTo">
+        <span [ngClass]="{'male':item.gender === 'M','female':item.gender === 'F'}">{{item.name}}</span>
+        <span class="spacer"></span>
+        <span [ngClass]="{'male':item.marriedTo.gender === 'M','female':item.marriedTo.gender === 'F'}">{{item.marriedTo.name}}</span>
+      </div>
+      <ul *ngIf="item.children">
+        <li *ngFor="let item of item.children">
+          <div *ngIf="!item.marriedTo">
+            <span [ngClass]="{'male':item.gender === 'M','female':item.gender === 'F'}">{{item.name}}</span>
+          </div>
+          <div *ngIf="item.marriedTo">
+            <span [ngClass]="{'male':item.gender === 'M','female':item.gender === 'F'}">{{item.name}}</span>
+            <span class="spacer"></span>
+            <span [ngClass]="{'male':item.marriedTo.gender === 'M','female':item.marriedTo.gender === 'F'}">{{item.marriedTo.name}}</span>
+          </div>
+          <ul *ngIf="item.children">
+            <li *ngFor="let item of item.children">
+              <div *ngIf="!item.marriedTo">
+                <span [ngClass]="{'male':item.gender === 'M','female':item.gender === 'F'}">{{item.name}}</span>
+              </div>
+              <div *ngIf="item.marriedTo">
+                <span [ngClass]="{'male':item.gender === 'M','female':item.gender === 'F'}">{{item.name}}</span>
+                <span class="spacer"></span>
+                <span [ngClass]="{'male':item.marriedTo.gender === 'M','female':item.marriedTo.gender === 'F'}">{{item.marriedTo.name}}</span>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="!data">
+  No Data Available
+</div>
